@@ -17,6 +17,9 @@ defaults:
       layout: "post"
 
 projects:
+  show_language: true
+  show_stargazers_count: false
+  show_forks_count: false
   sort_by: pushed
   # sort_by options:
   #   - pushed
@@ -24,8 +27,12 @@ projects:
   limit: 9
   exclude:
     archived: false
-    forks: true
+    # forks: true
     projects:
+      - kevinshi97.github.io
+      - csc258
+      - web-api-auth-examples
+      - Chess-Game
     # - repo-name
 
 # social_media:
@@ -46,13 +53,70 @@ projects:
   # website: http://your_website_url
   # youtube: your_username
 
+social_media: 
+  github: kevinshi97
+  linkedin: kev-shi
+
 topics:
-  - name: CSS
-    web_url: https://github.com/topics/css
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+  # - name: CSS
+  #   web_url: https://github.com/topics/css
+  #   image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
 
-  - name: Web design
+  # - name: Web design
 
-  - name: Sass
-    web_url: https://github.com/topics/sass
-    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+  # - name: Sass
+  #   web_url: https://github.com/topics/sass
+  #   image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/sass/sass.png
+
+  - name: Angular
+    # description: Released in 2016, Angular is a rewrite of AngularJS. It focuses on good mobile development, modularity, and improved dependency 
+    #   injection. Angular is designed to comprehensively address a developer's web application workflow.
+    web_url: https://github.com/topics/angular
+    image_url: /assets/images/angular-logo.png
+
+  - name: React
+    # description: React (also known as React.js or ReactJS) is a JavaScript library that makes developing interactive user interfaces simple.
+    web_url: https://github.com/topics/react
+    image_url: /assets/images/react-logo.png
+
+  # - name: Node.js
+  #   # description: Node.js is a tool for executing JavaScript in a variety of environments. JavaScript had humble beginnings as a language that lived 
+  #   #   only in web browsers, but the Node.js project has expanded its reach and helped make it the most popular programming language in the world. 
+  #   #   Node.js extends the creative potential of people with web development experience, enabling a new generation of developers to create servers, 
+  #   #   command-line tools, desktop apps, and even robots.
+  #   web_url: https://github.com/topics/nodejs
+  #   image_url: /assets/images/nodejs-logo.png
+
+  # - name: Electron
+  #   # description: Electron is a desktop application framework developed by GitHub and created by Cheng Zhao. It allows for the development of desktop 
+  #   #   applications using front- and back-end infrastructure such as HTML, CSS, and JavaScript.
+  #   web_url: https://github.com/topics/electron
+  #   image_url: /assets/images/electron-logo.png
+
+  - name: Python
+    # description: Python is a dynamically typed programming language designed by Guido van Rossum. Much like the programming language Ruby, 
+    #   Python was designed to be easily read by programmers. Because of its large following and many libraries, Python can be implemented and used 
+    #   to do anything from webpages to scientific research.
+    web_url: https://github.com/topics/python
+    image_url: /assets/images/python-logo.png
+
+  - name: Java
+    # description: Java was originally developed as an alternative to the C/C++ programming languages. It is now mainly used for building web, desktop,
+    #   mobile, and embedded applications. Java is owned and licensed through Oracle, with free and open source implementations available from Oracle
+    #   and other vendors.
+    web_url: https://github.com/topics/java
+    image_url: /assets/images/java-logo.png
+
+  - name: C
+    # description: C is a programming language designed by Dennis Ritchie at Bell Labs. C is very widely used, straightforward, and can be compiled 
+    #   to a number of platforms and operating systems. C is an imperative language, with a small number of keywords and a large number of mathematical 
+    #   operators.
+    web_url: https://github.com/topics/c
+    image_url: /assets/images/c-logo.png
+
+  - name: Machine Learning
+    # description: Machine learning is the practice of teaching a computer to learn. The concept uses pattern recognition, as well as other forms 
+    #   of predictive algorithms, to make judgments on incoming data. This field is closely related to artificial intelligence and computational statistics.
+    web_url: https://github.com/topics/machine-learning
+    image_url: /assets/images/machine-learning-logo.png
+
