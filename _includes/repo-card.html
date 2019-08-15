@@ -1,19 +1,31 @@
-<div class="github-component d-flex flex-column flex-justify-between height-full text-left {% if site.style == 'dark' %}box-shadow{% else %}border border-gray-light{% endif %} bg-white rounded-1 p-3">
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+  {% assign repo_card_styles = 'border-dark bg-jet-black' %}
+  {% assign fill_styles = 'fill-light-grey' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+  {% assign repo_card_styles = 'border-gray-light bg-white' %}
+  {% assign fill_styles = 'fill-slate-grey' %}
+{% endif %}
+
+<div class="github-component d-flex flex-column flex-justify-between height-full text-left box-shadow border {{ repo_card_styles }} rounded-1 p-3">
   <div>
     <div class="d-flex flex-justify-between flex-items-start mb-1">
       <h1 class="f4 lh-condensed mb-1">
-        <a href="{{ repository.html_url }}">
-          {% octicon repo height:20 class:"mr-1 v-align-middle" fill:"#586069" aria-label:repo %}
+        <a href="{{ repository.html_url }}" class = "{{ head_text_styles }}">
+          {% octicon repo height:20 class:"mr-1 v-align-middle {{fill_styles}}" aria-label:repo %}
           {{ repository.name }}
         </a>
       </h1>
     </div>
-    <div class="text-gray mb-2 ws-normal">{{ repository.description }}</div>
+    <div class="{{ main_text_styles }} mb-2 ws-normal">{{ repository.description }}</div>
   </div>
   <div class="d-flex f6">
     {% if repository.language %}
-        <span class="repo-language-color ml-0 mr-1" style="background-color:{{ site.data.colors[repository.language]["color"] }}"></span>
-        <span class="mr-3" itemprop="programmingLanguage">{{ repository.language }}</span>
+        <span class="repo-language-color ml-0 mr-1" style="background-color:{{site.data.colors[repository.language]['color']}}"></span>
+        <span class="mr-3 {{main_text_styles}}" itemprop="programmingLanguage">{{ repository.language }}</span>
     {% endif %}
     <!-- {% if repository.stargazers_count %}
       <a href="{{ repository.html_url }}/stargazers" class="d-inline-block link-gray mr-4">

@@ -1,5 +1,6 @@
 layout: sidebar
 style: light
+# style: dark
 
 plugins:
   - jekyll-octicons
@@ -56,6 +57,8 @@ projects:
 social_media: 
   github: kevinshi97
   linkedin: kev-shi
+  email: kevins.shi@mail.utoronto.ca
+  resume: my-resume
 
 topics:
   # - name: CSS

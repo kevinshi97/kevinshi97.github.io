@@ -1,5 +1,14 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Projects</h2>
-<!-- <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p> -->
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+{% endif %}
+
+
+<h2 class = "{{head_text_styles}}">My Projects</h2>
+<p class="f4 mb-4 {{main_text_styles}}">GitHub repositories that I've built.</p>
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
   {% if site.projects.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}

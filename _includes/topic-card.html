@@ -1,5 +1,15 @@
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+  {% assign card_style = 'border-dark bg-jet-black' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+  {% assign card_style = 'border-gray-light bg-white' %}
+{% endif %}
+
 {% if topic.web_url %}
-  <a href="{{ topic.web_url }}" class="github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center border border-gray-light rounded-1 bg-white p-5">
+  <a href="{{ topic.web_url }}" class="github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center rounded-1 border {{card_style}} p-5">
     {% if topic.image_url %}
       <img src="{{ topic.image_url }}" width="64" height="64" class="mx-auto rounded-1 mb-3" alt="{{ topic.name }}">
     {% else %}
@@ -10,9 +20,9 @@
         #
       </div>
     {% endif %}
-    <p class="f3 lh-condensed text-center link-gray-dark mb-0 mt-1">{{ topic.name }}</p>
+    <p class="f3 lh-condensed text-center {{head_text_styles}} mb-0 mt-1">{{ topic.name }}</p>
     {% if topic.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ topic.description }}</p>
+      <p class="f5 {{main_text_styles}} text-center mb-0 mt-1">{{ topic.description }}</p>
     {% endif %}
   </a>
 {% else %}

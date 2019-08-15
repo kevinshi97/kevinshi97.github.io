@@ -1,0 +1,15 @@
+#switchContainer {
+    cursor: pointer !important;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#themeSwitchLabel {
+    cursor: pointer;
+}
+#switchText {
+    margin-top: -5px;
+}

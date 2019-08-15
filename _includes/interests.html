@@ -1,5 +1,13 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Interests</h2>
-<!-- <p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Topics that I want to learn more about.</p> -->
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+{% endif %}
+
+<h2 class = "{{head_text_styles}}">My Interests</h2>
+<p class="f4 mb-4 {{main_text_styles}}">Topics that I want to learn more about.</p>
 <div class="d-flex flex-wrap gutter-condensed mb-4">
   {% for topic in site.topics %}
     <div class="col-6 col-md-12 col-lg-6 col-xl-4 mb-3">
