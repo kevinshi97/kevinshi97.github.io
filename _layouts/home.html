@@ -54,13 +54,17 @@
 
         {% include projects.html %}
 
-        {% if site.topics %}
-          {% include interests.html %}
+        {% if site.publications %}
+          {% include publications.html %}
         {% endif %}
 
-        {% unless posts_total == 0 %}
+        <!-- {% if site.topics %}
+          {% include interests.html %}
+        {% endif %} -->
+        
+        <!-- {% unless posts_total == 0 %}
           {% include thoughts.html %}
-        {% endunless %}
+        {% endunless %} -->
       </div>
     </div>
   </div>

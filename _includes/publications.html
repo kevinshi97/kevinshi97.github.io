@@ -1,0 +1,18 @@
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+{% endif %}
+
+<h2 class = "{{head_text_styles}}">Publications</h2>
+<p class="f4 mb-4 {{main_text_styles}}">Papers that I've contributed to. </p>
+<div class="d-flex flex-wrap gutter-condensed mb-4">
+  {% for publication in site.publications %}
+    <!-- <div class="col-6 col-md-12 col-lg-6 col-xl-4 mb-3"> -->
+    <div style="width: 100%;">
+      {% include pub-card.html %}
+    </div>
+  {% endfor %}
+</div>

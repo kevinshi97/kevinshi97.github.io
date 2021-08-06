@@ -1,0 +1,39 @@
+{% if site.style == 'dark' %}
+  {% assign head_text_styles = 'text-white' %}
+  {% assign main_text_styles = 'text-light-grey' %}
+  {% assign repo_card_styles = 'border-dark bg-jet-black' %}
+  {% assign fill_styles = 'fill-light-grey' %}
+{% else %}
+  {% assign head_text_styles = 'text-black' %}
+  {% assign main_text_styles = 'text-dark-grey' %}
+  {% assign repo_card_styles = 'border-gray-light bg-white' %}
+  {% assign fill_styles = 'fill-slate-grey' %}
+{% endif %}
+
+<div class="github-component d-flex flex-column flex-justify-between height-full text-left box-shadow border {{ repo_card_styles }} rounded-1 p-3">
+  <div>
+    <div 
+      class="d-flex flex-justify-between flex-items-start mb-1"
+      style="display: flex; flex-direction: column;"
+    >
+      <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;">
+        <h1 class="f4 lh-condensed mb-1 {{ head_text_styles }}">
+          {{ publication.name }}
+        </h1>
+  
+        <h1 class="f4 lh-condensed mb-1 {{ head_text_styles }}">
+          [
+          <a href="{{ publication.web_url }}" class = "{{ head_text_styles }}"> arXiv </a>
+          |
+          <a href="{{ publication.pdf }}" class = "{{ head_text_styles }}"> pdf </a>
+          ]
+        </h1>
+      </div>
+      
+      <p class="{{ main_text_styles }}">
+        Hadi Hosseini, Debmalya Mandal, Nisarg Shah, Kevin Shi
+      </p>
+
+    </div>
+  </div>
+</div>
