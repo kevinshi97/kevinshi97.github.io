@@ -75,6 +75,8 @@ topics:
     image_url: /assets/images/machine-learning-logo.png
 
 publications:
-  - name: Surprisingly Popular Voting Recovers Rankings, Surprisingly! (IJCAI-21)
+  - name: Surprisingly Popular Voting Recovers Rankings, Surprisingly!
+    conference: IJCAI 2021
+    conference_url: https://ijcai-21.org/
     web_url: https://arxiv.org/abs/2105.09386
     pdf: spvoting.pdf
